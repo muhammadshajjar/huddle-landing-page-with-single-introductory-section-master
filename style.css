@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    /*PRIMARY COLORS*/
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    /*FONT FAMILY FOR HEADING*/
+    --heading-popins: 'Poppins', sans-serif;
+    /*FONT FAMILY FOR BODY*/
+    --body-open: 'Open Sans', sans-serif;
+    /*FONT SIZES*/
+    --fs-400: 400;
+    --fs-600: 600;
+}
+
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--Violet);
+    background-image: url("./images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: var(--body-open);
+    color: white;
+}
+
+.container {
+    max-width: 90rem;
+    width: 82%;
+    margin: 0 auto;
+}
+
+
+/*-----------
+    HEADER
+-------------*/
+
+header {
+    padding-top: 2rem;
+}
+
+.logo img {
+    height: 2rem;
+}
+
+
+/*----------
+MAIN CONTENT
+------------*/
+
+.hero__img {
+    margin-top: 3.312rem;
+}
+
+.hero__img img {
+    width: 100%;
+}
+
+.hero {
+    margin-top: 3.56rem;
+    text-align: center;
+}
+
+.hero__title {
+    font-family: var(--heading-popins);
+    font-weight: var(--fs-600);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.hero__disc {
+    font-family: var(--body-open);
+    margin-top: 1rem;
+    margin-bottom: 2.06rem;
+    line-height: 1.7;
+}
+
+
+/*----------
+CALL TO ACTION BUTTON
+------------*/
+
+.btn {
+    display: inline-block;
+    font-family: var(--heading-popins);
+    font-size: 0.81rem;
+    background: white;
+    padding: .9em 6em;
+    border-radius: 1.87rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--Violet);
+    cursor: pointer;
+    box-shadow: 2px 8px 10px 1px rgb(0 0 0 / 32%);
+}
+
+
+/*putting icons with the help of psuedo selectors is not work for me because some of the social icons are not displaying*/
+
+
+/*
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.social__icon--facebook::before {
+    content: "\f39e";
+}
+*/
+
+.btn:hover,
+.btn:focus {
+    background: var(--Soft-Magenta);
+    color: white;
+}
+
+
+/*------------
+FOOTER
+--------------*/
+
+.footer__f-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.75rem;
+    padding-bottom: 1.5rem;
+}
+
+.social-icons__list {
+    display: flex;
+    justify-content: center;
+    gap: 0.81rem;
+}
+
+.social-icons__items {
+    list-style-type: none;
+}
+
+.social-icons__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.87rem;
+    width: 1.87rem;
+    font-size: 0.87rem;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.social-icons__link:hover,
+.social-icons__link:focus {
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+}
+
+
+/*-------------
+ATTRIBUTION
+---------------*/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin: 1.25rem 0 0 0;
+}
+
+.attribution a {
+    color: var(--Soft-Magenta);
+}
+
+@media (min-width:650px) {
+    body {
+        background-image: url("./images/bg-desktop.svg");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .container {
+        width: 90%;
+    }
+    .logo img {
+        height: 3.12rem;
+    }
+    .hero__title {
+        font-size: 2.25rem;
+    }
+    .hero__disc {
+        font-size: 1.25rem
+    }
+    .btn {
+        font-size: 1.43rem;
+        padding: .6em 3.5em;
+    }
+    .social-icons__link {
+        font-size: 1.2rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .attribution {
+        font-size: 0.87rem;
+    }
+}
+
+@media (min-width:1354px) {
+    header {
+        padding-top: 3.8rem;
+    }
+    main {
+        margin-top: 0.81rem;
+    }
+    .hero {
+        width: 40%;
+        text-align: left;
+    }
+    .f-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .hero__disc {
+        font-size: 1.062rem;
+        margin-top: 1.56rem;
+        letter-spacing: .5px;
+        line-height: 1.6;
+        margin-bottom: 1.56rem;
+    }
+    .hero__title {
+        font-size: 2.56rem;
+        margin-top: 2.68rem;
+        line-height: 1.4;
+    }
+    .btn {
+        font-size: 1.25rem;
+        padding: 0.65em 3.3em;
+    }
+    .footer__f-container {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 0;
+        padding-bottom: 2.3rem;
+    }
+}
