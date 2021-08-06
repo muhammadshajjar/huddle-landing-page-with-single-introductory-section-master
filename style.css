@@ -220,7 +220,7 @@ ATTRIBUTION
 
 @media (min-width:1354px) {
     header {
-        padding-top: 3.8rem;
+        padding-top: 3.6rem;
     }
     main {
         margin-top: 0.81rem;
@@ -233,17 +233,17 @@ ATTRIBUTION
         display: flex;
         justify-content: space-between;
     }
+    .hero__title {
+        font-size: 2.56rem;
+        margin-top: 2.84rem;
+        line-height: 1.4;
+    }
     .hero__disc {
         font-size: 1.062rem;
         margin-top: 1.56rem;
         letter-spacing: .5px;
         line-height: 1.6;
         margin-bottom: 1.56rem;
-    }
-    .hero__title {
-        font-size: 2.56rem;
-        margin-top: 2.68rem;
-        line-height: 1.4;
     }
     .btn {
         font-size: 1.25rem;
@@ -253,6 +253,6 @@ ATTRIBUTION
         flex-direction: row-reverse;
         justify-content: space-between;
         margin-top: 0;
-        padding-bottom: 2.3rem;
+        padding-bottom: 2rem;
     }
 }
